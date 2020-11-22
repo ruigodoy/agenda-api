@@ -2,13 +2,10 @@ const express = require('express');
 
 const ContatoController = require('./controllers/contatoController')
 const agendaController = require('./controllers/agendaController')
-const sessionController = require('./controllers/sessionController');
 const contatoController = require('./controllers/contatoController');
 
 
 const routes = express.Router();
-
-routes.post('/sessions', sessionController.create)
 
 routes.get('/agenda', agendaController.index);
 routes.post('/agenda', agendaController.create);
